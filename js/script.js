@@ -71,15 +71,19 @@ const appendPageLinks = (list) => {
       let a = document.createElement('a');
       a.textContent = i + 1;
       a.href = '#';
+   
 
       ul.appendChild(li);
       li.appendChild(a);
-     
+           
       a.addEventListener('click', (e) => {
-            showPage(list, i)
+            
+            showPage(list, i + 1)
             e.target.className = 'active';
          }
       );
+
+      
       
    }
 
